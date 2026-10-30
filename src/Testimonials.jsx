@@ -1,7 +1,8 @@
 import './Portfolio.css';
 
-export default function Tools() {
-    return () {
+export default function Testimonials() {
+    return (
+      <div>
         <div>
             {/* Testimonials Section */}
       <section className="testimonials-section" id="testimonials">
@@ -68,5 +69,6 @@ export default function Tools() {
       </section>
 
         </div>
-    }
+      </div>
+    )
 }

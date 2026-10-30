@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import './Portfolio.css'
+import React, { useState } from 'react';
 
 const experienceData = [
   {
@@ -43,7 +42,8 @@ const experienceData = [
 ];
 
 export default function Experience() {
-  const [expandedId, setExpandedId] = useState(2); // Card 2 open by default matching screenshot
+  // Keeps item 2 expanded by default to match your screenshot layout
+  const [expandedId, setExpandedId] = useState(2);
 
   const toggleExpand = (id) => {
     setExpandedId(expandedId === id ? null : id);
@@ -51,22 +51,27 @@ export default function Experience() {
 
   return (
     <section className="experience-section" id="experience">
-      <div className="section-label-badge">EXPERIENCE</div>
+      {/* Small top label badge */}
+      <div className="section-label">EXPERIENCE</div>
       <h2 className="section-title">Where I’ve Worked</h2>
       <p className="section-subtitle">
         A summary of my professional journey and the impact I’ve made
       </p>
 
+      {/* Accordion Cards Container */}
       <div className="experience-accordion">
         {experienceData.map((item) => {
           const isExpanded = expandedId === item.id;
           return (
             <div key={item.id} className={`exp-card ${isExpanded ? 'expanded' : ''}`}>
-              <div className="exp-card-header">
+              
+              {/* Header: Role and Date aligned in one row */}
+              <div className="exp-card-header" onClick={() => toggleExpand(item.id)}>
                 <h3 className="exp-role">{item.role}</h3>
                 <span className="exp-period">{item.period}</span>
               </div>
 
+              {/* Collapsible bullet list */}
               {isExpanded && (
                 <ul className="exp-bullets">
                   {item.bullets.map((bullet, idx) => (
@@ -75,18 +80,21 @@ export default function Experience() {
                 </ul>
               )}
 
+              {/* Bottom-left circular arrow button */}
               <button 
                 className="exp-toggle-btn"
                 onClick={() => toggleExpand(item.id)}
                 aria-label={isExpanded ? "Collapse section" : "Expand section"}
               >
                 {isExpanded ? (
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  /* Up Arrow Icon */
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="12" y1="19" x2="12" y2="5"></line>
                     <polyline points="5 12 12 5 19 12"></polyline>
                   </svg>
                 ) : (
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  /* Down Arrow Icon */
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
                     <polyline points="19 12 12 19 5 12"></polyline>
                   </svg>
@@ -95,6 +103,13 @@ export default function Experience() {
             </div>
           );
         })}
+      </div>
+
+      {/* Download CV Pill Button at the bottom */}
+      <div className="experience-footer-action">
+        <a href="/resume.pdf" download className="btn-download-cv">
+          Download My CV <span>→</span>
+        </a>
       </div>
     </section>
   );

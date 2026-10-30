@@ -1,4 +1,5 @@
 import './Portfolio.css';
+import favIcon from './imgs/favIcon.png';
 
 export default function Footer() {
     return (
