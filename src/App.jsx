@@ -1,0 +1,342 @@
+import React from 'react';
+import './Portfolio.css';
+import heroImg from './imgs/hero.png';
+import project1Img from './imgs/project-1.png'
+import project2Img from './imgs/project-2.png'
+import project3Img from './imgs/project-3.png'
+import favIcon from './imgs/favIcon.png'
+
+// Tech stack icons for the infinite marquee train
+const techIcons = [
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+];
+
+const Portfolio = () => {
+  return (
+    <div className="portfolio-container">
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="nav-brand">
+          <img src={favIcon} alt="Olaide Akinbode" className="nav-avatar" />
+          <span>Olaide Akinbode</span>
+        </div>
+        <div className="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact" className="btn-nav-contact">Contact Me →</a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <header className="hero-section" id="about">
+        <div className="hero-content">
+          {/* Pulsating Available for Work Badge */}
+          <div className="status-badge">
+            <div className="pulse-dot-container">
+              <div className="pulse-dot-ring"></div>
+              <div className="pulse-dot-core"></div>
+            </div>
+            <span>Available for work</span>
+          </div>
+
+          <h1 className="hero-title">Frontend Developer.</h1>
+          <p className="hero-description">
+            Hi, I’m Olaide, a frontend developer with a product design background. I build responsive web applications with a focus on usability and clean interfaces.
+          </p>
+
+          <div className="hero-buttons">
+            <a href="#projects" className="btn-outline-pill">See my works</a>
+            <a href="#contact" className="btn-primary-white">
+              Contact Me <span>→</span>
+            </a>
+          </div>
+
+          {/* Infinite Moving Train Marquee Icon Tray */}
+          <div className="logo-marquee-container">
+            <div className="logo-marquee-track">
+              {techIcons.map((icon, idx) => (
+                <div className="logo-card" key={`orig-${idx}`}>
+                  <img src={icon} alt="tech icon" />
+                </div>
+              ))}
+              {techIcons.map((icon, idx) => (
+                <div className="logo-card" key={`dup-${idx}`}>
+                  <img src={icon} alt="tech icon" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="hero-image-wrapper">
+          <img 
+            src={heroImg} 
+            alt="Olaide Akinbode" 
+            className="hero-img" 
+          />
+        </div>
+      </header>
+
+      
+      {/* Projects Section */}
+      <section className="projects-section" id="projects">
+        <span className="section-label">PORTFOLIO</span>
+        <h2 className="section-title">Projects I've Built</h2>
+        <p className="section-subtitle">A selection of recent work showcasing UI design, code quality, and front-end performance.</p>
+
+        <div className="projects-grid">
+          {/* Project 1 */}
+          <div className="project-card">
+            <div className="project-image">
+              <img src={project1Img} alt="VoiceOps Mockup" />
+            </div>
+            <div className="project-info">
+              <h3>VoiceOps</h3>
+              <p> Built an operational layer that helps teams monitor, intervene, and govern AI conversations in production.</p>
+              <div className="project-actions">
+                <a href="#" className="btn-outline">Source Code</a>
+                <a href="#" className="btn-primary-sm">Live Website →</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 2 */}
+          <div className="project-card">
+            <div className="project-image">
+              <img src={project2Img} alt="Boundary Desktop" />
+            </div>
+            <div className="project-info">
+              <h3>Matcha Haven</h3>
+              <p>A modern e-commerce platform built for a premium tea brand, focusing on speed and intuitive layout.</p>
+              <div className="project-actions">
+                <a href="#" className="btn-outline">Source Code</a>
+                <a href="#" className="btn-primary-sm">Live Website →</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 3 */}
+          <div className="project-card">
+            <div className="project-image">
+              <img src={project3Img} alt="boundary-mobile" />
+            </div>
+            <div className="project-info">
+              <h3>Boundary Mobile</h3>
+              <p>Redesigned a mobile expense-compliance experience that simplifies reimbursements, expense tracking, and real-time compliance visibility.</p>
+              <div className="project-actions">
+                <a href="#" className="btn-outline">Source Code</a>
+                <a href="https://figma.com/proto/5b9Mb6OIhwOrMXiGlbf7O8/Boundary?node-id=365-636&p=f&t=jESM9AfnPVgkwup0-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=423%3A1230" className="btn-primary-sm">Live Prototype →</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 4 */}
+          <div className="project-card">
+            <div className="project-image">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600" alt="Lucent" />
+            </div>
+            <div className="project-info">
+              <h3>Lucent</h3>
+              <p>A minimalist dark-themed portfolio template built for developers seeking modern design.</p>
+              <div className="project-actions">
+                <a href="#" className="btn-outline">Source Code</a>
+                <a href="#" className="btn-primary-sm">Live Website →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="experience-section" id="experience">
+        <span className="section-label">CAREER</span>
+        <h2 className="section-title">Where I've Worked</h2>
+        <p className="section-subtitle">A timeline of my professional roles and key accomplishments.</p>
+
+        <div className="experience-accordion">
+          {/* Active Experience */}
+          <div className="exp-item active">
+            <div className="exp-header">
+              <span className="exp-title">Lead Developer — Aenonmento</span>
+              <span className="exp-date">2025 — Present</span>
+            </div>
+            <ul className="exp-details">
+              <li>Built custom React and Next.js applications for clients across various industries.</li>
+              <li>Collaborated with designers to deliver modern UI/UX with high fidelity.</li>
+              <li>Optimized web applications for performance and mobile responsiveness.</li>
+            </ul>
+          </div>
+
+          <div className="exp-item">
+            <div className="exp-header">
+              <span className="exp-title">Web Developer — Momentum</span>
+              <span className="exp-date">2024 — 2025</span>
+            </div>
+          </div>
+
+          <div className="exp-item">
+            <div className="exp-header">
+              <span className="exp-title">Product/Web Designer — OneLife Initiative</span>
+              <span className="exp-date">2022 — 2024</span>
+            </div>
+          </div>
+
+          <div className="exp-item">
+            <div className="exp-header">
+              <span className="exp-title">Network Engineer — Contec Global</span>
+              <span className="exp-date">2015 — 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="resume-btn-container">
+          <a href="#" className="btn-outline">View Full Resume ↗</a>
+        </div>
+      </section>
+
+      {/* Tools Section */}
+      <section className="tools-section">
+        <span className="section-label">MY STACK</span>
+        <h2 className="section-title">Tools I Build With</h2>
+        <p className="section-subtitle">A collection of technologies I rely on to craft clean, robust user interfaces.</p>
+
+        <div className="tools-grid">
+          <div className="tool-card"><span className="tool-icon">⚛️</span> HTML5</div>
+          <div className="tool-card"><span className="tool-icon">🎨</span> CSS3</div>
+          <div className="tool-card"><span className="tool-icon">🟨</span> JavaScript</div>
+          <div className="tool-card"><span className="tool-icon">🟦</span> React</div>
+          <div className="tool-card"><span className="tool-icon">🔺</span> Next.js</div>
+          <div className="tool-card"><span className="tool-icon">🔴</span> Redux</div>
+          <div className="tool-card"><span className="tool-icon">🌊</span> Tailwind CSS</div>
+          <div className="tool-card"><span className="tool-icon">💎</span> Sass</div>
+          <div className="tool-card"><span className="tool-icon">🟢</span> GSAP</div>
+          <div className="tool-card"><span className="tool-icon">📘</span> TypeScript</div>
+          <div className="tool-card"><span className="tool-icon">⚛️</span> Vite</div>
+          <div className="tool-card"><span className="tool-icon">⚙️</span> Git</div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="testimonials-section" id="testimonials">
+        <span className="section-label">TESTIMONIALS</span>
+        <h2 className="section-title">Don't just take my word for it</h2>
+        <p className="section-subtitle">Here is what colleagues and clients have to say about working with me.</p>
+
+        <div className="testimonials-grid">
+          <div className="testimonial-card">
+            <div className="author-info">
+              <img src="https://i.pravatar.cc/100?img=33" alt="John Smith" />
+              <div>
+                <h4>John Smith</h4>
+                <p>Engineering Manager, Stripe</p>
+              </div>
+            </div>
+            <p className="testimonial-text">"Samuel delivered outstanding work. His attention to detail and React knowledge made our product launch smooth and stress-free."</p>
+          </div>
+
+          <div className="testimonial-card">
+            <div className="author-info">
+              <img src="https://i.pravatar.cc/100?img=47" alt="Michael Chen" />
+              <div>
+                <h4>Michael Chen</h4>
+                <p>Lead Designer, Airbnb</p>
+              </div>
+            </div>
+            <p className="testimonial-text">"Working with Samuel was a pleasure. He bridged the design-to-code gap flawlessly and delivered clean, pixel-perfect UI."</p>
+          </div>
+
+          <div className="testimonial-card">
+            <div className="author-info">
+              <img src="https://i.pravatar.cc/100?img=12" alt="David Park" />
+              <div>
+                <h4>David Park</h4>
+                <p>CTO, Linear</p>
+              </div>
+            </div>
+            <p className="testimonial-text">"Fast, reliable, and highly knowledgeable. Samuel helped us scale our front-end infrastructure with ease."</p>
+          </div>
+
+          <div className="testimonial-card">
+            <div className="author-info">
+              <img src="https://i.pravatar.cc/100?img=5" alt="Sarah Johnson" />
+              <div>
+                <h4>Sarah Johnson</h4>
+                <p>Senior Developer, Microsoft</p>
+              </div>
+            </div>
+            <p className="testimonial-text">"Samuel has a deep understanding of web performance and user experience. I highly recommend him for complex React apps."</p>
+          </div>
+
+          <div className="testimonial-card">
+            <div className="author-info">
+              <img src="https://i.pravatar.cc/100?img=9" alt="Karen Ross" />
+              <div>
+                <h4>Karen Ross</h4>
+                <p>Product Manager, Figma</p>
+              </div>
+            </div>
+            <p className="testimonial-text">"An exceptional engineer who consistently delivers top-quality code. Samuel is a vital asset to any front-end project."</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="cta-section" id="contact">
+        <div className="cta-banner">
+          <div className="cta-overlay"></div>
+          <div className="cta-content">
+            <h2>Let's Build Something Great.</h2>
+            <p>I am available for freelance projects, full-time roles, or technical consultation.</p>
+            <a href="mailto:contact@example.com" className="btn-primary">Contact Me →</a>
+          </div>
+        </div>
+      </section>
+
+            
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <div className="footer-profile-brand">
+              <img src={favIcon} alt="Olaide Akinbode" className="footer-avatar" />
+              <span className="footer-name">Olaide Akinbode</span>
+            </div>
+            <p className="footer-description">I build fast, polished, and user-friendly products that deliver real value.</p>
+            
+            <div className="social-links-row">
+              <a href="https://github.com" target="_blank" rel="noreferrer" className="social-icon-btn">
+                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512" height="1em" width="1em"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.9-.3-1.9-3-3-5.9-2.6zM248 8C111.03 8 0 119.03 0 256c0 108.04 70.07 199.5 167.85 231.81 12.2 2.2 16.6-5.28 16.6-11.7 0-5.8-.2-21.1-.3-41.5-69.2 15.05-83.84-33.42-83.84-33.42-11.1-28.28-27.07-35.82-27.07-35.82-22.52-15.42 1.71-15.1 1.71-15.1 24.9 1.75 38.02 25.58 38.02 25.58 22.13 37.91 58.1 26.9 72.23 20.56 2.3-16 8.6-26.9 16.1-33.08-55.5-6.3-112.14-27.75-112.14-121.28 0-26.75 9.55-48.65 25.26-65.78-2.5-6.3-10.95-31.1 2.4-64.7 0 0 20.88-6.68 68.3 25.3 19.88-5.52 41.16-8.3 62.35-8.42 21.18.12 42.47.29 62.35 8.42 47.42-31.98 68.28-25.3 68.28-25.3 13.38 33.6 4.93 58.4 2.4 64.7 15.71 17.13 25.25 39.03 25.25 65.78 0 93.65-56.77 114.98-111.22 121.3 9.01 7.78 17.02 23.08 17.02 46.52 0 33.51-.3 60.53-.3 68.7 0 6.43 4.3 13.9 16.64 11.59C425.96 455.51 496 364.04 496 256 496 119.03 384.97 8 248 8z" /></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-icon-btn">
+                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.777 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.58-8.128 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.293z" /></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-icon-btn">
+                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" height="1em" width="1em"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" /></svg>
+              </a>
+            </div>
+          </div>
+          
+          <div className="footer-links-vertical">
+            <a href="#about">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#testimonials">Testimonials</a>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p className="footer-copy">© 2026 Olaide Akinbode — Designed & Built with React.</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Portfolio;
