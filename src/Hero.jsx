@@ -25,7 +25,7 @@ export default function Hero() {
 
         <h1 className="hero-title">Frontend Developer.</h1>
         <p className="hero-description">
-          Hi, I’m Olaide, a frontend developer with a product design background. I build responsive web applications with a focus on usability and clean interfaces.
+          Hi, I’m Olaide, a frontend developer and product designer with a background in engineering. I build responsive web applications with a focus on usability and clean interfaces.
         </p>
 
         <div className="hero-buttons">
@@ -37,11 +37,6 @@ export default function Hero() {
 
         <div className="logo-marquee-container">
           <div className="logo-marquee-track">
-            {techIcons.map((icon, idx) => (
-              <div className="logo-card" key={`orig-${idx}`}>
-                <img src={icon} alt="tech icon" />
-              </div>
-            ))}
             {techIcons.map((icon, idx) => (
               <div className="logo-card" key={`dup-${idx}`}>
                 <img src={icon} alt="tech icon" />

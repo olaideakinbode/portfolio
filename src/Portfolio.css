@@ -933,5 +933,42 @@ body {
     flex-direction: column;
     gap: 24px;
   }
+  
+
+  @keyframes framerSpringEntrance {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  animation: framerSpringEntrance 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes framerLineEntrance {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+.hero-description {
+  animation: framerLineEntrance 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: 0.2s; /* Matches the 0.2s delay configuration */
+  opacity: 0; /* Ensures it stays hidden until the animation begins */
+}
 
 }   
