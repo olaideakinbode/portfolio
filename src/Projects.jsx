@@ -53,8 +53,8 @@ export default function Projects() {
                           <h3>Boundary Mobile</h3>
                           <p>Redesigned a mobile expense-compliance experience that simplifies reimbursements, expense tracking, and real-time compliance visibility.</p>
                           <div className="project-actions">
-                            <a href="#" className="btn-outline">Source Code</a>
-                            <a href="https://figma.com/proto/5b9Mb6OIhwOrMXiGlbf7O8/Boundary?node-id=365-636&p=f&t=jESM9AfnPVgkwup0-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=423%3A1230" className="btn-primary-sm">Live Prototype →</a>
+                            <a href="/projects/boundary" className="btn-outline">Explore Case Study</a>
+                            <a href="https://figma.com/proto/5b9Mb6OIhwOrMXiGlbf7O8/Boundary?node-id=365-636&p=f&t=jESM9AfnPVgkwup0-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=423%3A1230" className="btn-primary-sm"> See Live Prototype →</a>
                           </div>
                         </div>
                       </div>

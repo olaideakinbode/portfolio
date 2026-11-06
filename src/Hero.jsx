@@ -7,7 +7,8 @@ const techIcons = [
   'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
   'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
-  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
 ];
 
 export default function Hero() {
