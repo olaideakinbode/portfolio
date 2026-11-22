@@ -622,6 +622,7 @@ body {
 } */
 
 /* 4. Body & Bullet Text (Bigger, higher readability matching temp) */
+
 .exp-bullets {
   margin: 16px 0 20px 0;
   padding-left: 18px;
@@ -718,8 +719,10 @@ body {
   padding: 60px 0;
 }
 
+/*
 .cta-banner {
   position: relative;
+  background-image: url('./imgs/cta.jpg');
   background: linear-gradient(135deg, #1c1c1c 0%, #0d0d0d 100%);
   border: 1px solid #262626;
   border-radius: 20px;
@@ -727,6 +730,7 @@ body {
   text-align: center;
   overflow: hidden;
 }
+  */
 
 .cta-content h2 {
   font-size: 2.25rem;
@@ -738,6 +742,36 @@ body {
   color: #888;
   margin-bottom: 24px;
 }
+
+
+.cta-banner {
+  position: relative;
+  overflow: hidden; 
+  border-radius: 20px; 
+  background-image: url('./imgs/cta.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 550px;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.72); /* adjust darkness so white text stays readable */
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2; /* keeps text and button above the overlay */
+}
+
 
 
 /* Footer Layout Base */
@@ -969,6 +1003,162 @@ body {
   animation: framerLineEntrance 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   animation-delay: 0.2s; /* Matches the 0.2s delay configuration */
   opacity: 0; /* Ensures it stays hidden until the animation begins */
+}
+
+/* ==========================================================================
+   Boundary Project Case Study Page (Dark Theme Variant)
+   ========================================================================== */
+
+.boundary-page {
+  background-color: #000000;
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.boundary-content {
+  width: 100%;
+  max-width: 44rem; /* ~704px centered container */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 8rem;    /* Generous top margin from Navbar */
+  padding-bottom: 6rem; /* Generous bottom margin from Footer */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.boundary-title {
+  margin-top: 4rem !important; /* Forces space above the title */
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .boundary-title {
+    font-size: 3.25rem;
+  }
+}
+
+.boundary-meta {
+  display: flex;
+  flex-direction: row; /* Places Client and Year side-by-side */
+  align-items: center;
+  color: #a1a1aa; /* zinc-400 */
+  gap: 2.5rem;          /* Space between the Client group and Year group */
+  margin-bottom: 2rem;
+}
+
+.boundary-meta-item {
+  display: flex;        /* Allows label and value to sit nicely together */
+  flex-direction: row;  
+  align-items: center;
+  gap: 0.5rem;          /* Space between "Client" and "Kora" */
+}
+
+.boundary-meta-label {
+  color: #71717a; /* zinc-500 */
+}
+
+.boundary-meta-value {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+
+.boundary-description {
+  color: #d4d4d8; /* zinc-300 */
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 3rem;
+  letter-spacing: -0.005em;
+}
+
+.boundary-scope {
+  margin-bottom: 2.5rem;
+}
+
+.boundary-scope-title {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #a1a1aa;
+  margin-bottom: 0.875rem;
+}
+
+.boundary-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.boundary-tag {
+  padding: 0.4rem 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #18181b; /* Dark pill surface */
+  border: 1px solid #27272a;   /* Subtle border outline */
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.boundary-link-wrapper {
+  margin-bottom: 4rem;
+}
+
+.boundary-live-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.boundary-live-link:hover {
+  color: #a1a1aa;
+}
+
+.boundary-link-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: 0.35rem;
+  transition: transform 0.2s ease;
+}
+
+.boundary-live-link:hover .boundary-link-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Optional Image Gallery / Showcase Slots */
+.boundary-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.boundary-image-placeholder {
+  width: 100%;
+  height: 360px;
+  background-color: #121214;
+  border: 1px dashed #27272a;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #52525b;
+  font-size: 0.875rem;
 }
 
 }   

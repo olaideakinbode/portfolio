@@ -1,0 +1,28 @@
+
+.divider-container {
+  grid-column: 1 / -1; /* Forces the divider to span across every column in the grid */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 24px 0;
+  padding-top: 48px;
+}
+
+.divider-container::before,
+.divider-container::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.divider-text {
+  padding: 0 16px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888888;
+  white-space: nowrap;
+}

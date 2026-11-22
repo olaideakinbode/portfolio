@@ -1,20 +1,22 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import favIcon from './imgs/favIcon.png';
 import './Portfolio.css';
 
 export default function Navbar() {
-    return (
+  return (
     <div>
       {/* Navbar */}
       <nav className="navbar">
-        <a href="#" className="nav-brand">
+        <Link to="/" className="nav-brand">
           <img src={favIcon} alt="Olaide Akinbode" className="nav-avatar" />
           <span>Olaide Akinbode</span>
-        </a>
+        </Link>
         <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#testimonials">Testimonials</a>
+          <Link to="/#about">About</Link>
+          <Link to="/#projects">Projects</Link>
+          <Link to="/#experience">Experience</Link>
+          <Link to="/#testimonials">Testimonials</Link>
           <a href="#contact" className="btn-nav-contact">Contact Me →</a>
         </div>
       </nav>

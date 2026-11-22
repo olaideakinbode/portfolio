@@ -25,8 +25,7 @@ export default function Hero() {
 
         <h1 className="hero-title">Frontend Developer.</h1>
         <p className="hero-description">
-          Hi, I’m Olaide, a frontend developer and product designer with a background in engineering. I build responsive web applications with a focus on usability and clean interfaces.
-        </p>
+I'm a Frontend Developer with a background in enterprise technology and product design. I combine frontend development, UI/UX thinking, and business understanding to build clean, reliable React interfaces for complex workflows.        </p>
 
         <div className="hero-buttons">
           <a href="#projects" className="btn-outline-pill">See my works</a>

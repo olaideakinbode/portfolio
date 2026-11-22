@@ -1,0 +1,356 @@
+/* ==========================================================================
+   Project Details Page Layout
+   ========================================================================== */
+
+/* Outer page layout container */
+.boundary-page {
+  background-color: #0d0d0d;
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Centralized content container */
+.boundary-content {
+  width: 100%;
+  max-width: 44rem; /* ~704px centered container */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 6rem;    /* Generous top margin from Navbar */
+  padding-bottom: 6rem; /* Generous bottom margin from Footer */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Project Title */
+.boundary-title {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Metadata Bar (Client & Year inline layout) */
+.boundary-meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Individual Metadata Group (Label + Value) */
+.boundary-meta-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.boundary-meta-label {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.boundary-meta-value {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Project Description Paragraph */
+.boundary-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+  margin-bottom: 2.5rem;
+}
+
+/* Section Headings (Scope of Work, etc.) */
+.boundary-scope h2,
+.boundary-scope-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+/* Scope of Work subtext / tags */
+.boundary-scope-text {
+  font-size: 1rem;
+  color: #a1a1aa;
+  margin-bottom: 1.5rem;
+}
+/* External Link / Action Button */
+.boundary-link-wrapper a,
+.boundary-link-wrapper a:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #60a5fa;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.boundary-link-wrapper a:hover {
+  color: #93c5fd;
+}
+
+.boundary-link-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.boundary-link-wrapper a:hover .boundary-link-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Previous / Next Project Row pinned to opposite ends of the column */
+.boundary-project-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Pill-shaped white buttons */
+.boundary-nav-btn,
+.boundary-nav-btn:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  background-color: #ffffff;
+  color: #0d0d0d;
+  border: 1px solid #d4d4d8;
+  border-radius: 9999px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.boundary-nav-btn:hover {
+  background-color: #f4f4f5;
+  border-color: #a1a1aa;
+}
+
+.boundary-nav-btn:active {
+  transform: scale(0.98);
+}
+
+.boundary-nav-btn:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Solution & Content Sections
+   ========================================================================== */
+
+.solution-section {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.solution-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.solution-intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+  margin-bottom: 1.5rem;
+}
+
+.solution-feature-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.solution-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.solution-list li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+}
+
+.solution-list li strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Marked Checklist */
+ul.marked-list {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+ul.marked-list li.marked::before {
+  content: "✓";
+  display: inline-block;
+  width: 1.25rem;
+  margin-left: -1.25rem;
+  color: #4ade80;
+  font-weight: bold;
+}
+
+ul.marked-list li:not(.marked)::before {
+  content: "○";
+  display: inline-block;
+  width: 1.25rem;
+  margin-left: -1.25rem;
+  color: #9ca3af;
+}
+
+/* ==========================================================================
+   Preview Banners & Side-by-Side Image Row
+   ========================================================================== */
+
+/* Single Wide Preview Banner (breaks out of 44rem column) */
+.solution-preview-banner {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: min(62vw, 1280px);
+  margin: 2.5rem 0;
+  padding: 24px;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: zoom-in;
+  z-index: 1;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    box-shadow 0.35s ease;
+}
+
+.solution-preview-banner:hover,
+.solution-preview-banner:active {
+  transform: translateX(-50%) scale(1.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+
+.solution-preview-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Two Side-by-Side Cards sharing the exact same breakout width */
+.solution-preview-row {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(62vw, 1280px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 2.5rem 0;
+  box-sizing: border-box;
+}
+
+.solution-preview-card {
+  background-color: #111113;
+  border: 1px solid #222225;
+  border-radius: 16px;
+  padding: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.35s ease;
+}
+
+.solution-preview-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65);
+}
+
+.solution-preview-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .solution-preview-banner,
+  .solution-preview-row {
+    left: 0;
+    transform: none;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .solution-preview-banner {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .solution-preview-banner:hover,
+  .solution-preview-banner:active {
+    transform: scale(1.02);
+  }
+
+  .solution-preview-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

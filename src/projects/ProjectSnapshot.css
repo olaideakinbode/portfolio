@@ -1,0 +1,77 @@
+/* Container matching your ~44rem (704px) centralized content column */
+.snapshot-container {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto 3rem auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Heading styling matching boundary-page hierarchy */
+.snapshot-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+/* Bordered Table wrapper */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #27272a; /* Dark border color */
+}
+
+/* Table element layout */
+.snapshot-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: #09090b; /* Slightly elevated dark background */
+}
+
+/* Table Header */
+.snapshot-table th {
+  padding: 0.85rem 1.25rem;
+  background-color: #18181b;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-bottom: 1px solid #27272a;
+  border-right: 1px solid #27272a;
+}
+
+.snapshot-table th:last-child {
+  border-right: none;
+}
+
+/* Table Rows & Cells */
+.snapshot-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #27272a;
+  border-right: 1px solid #27272a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.snapshot-table tr:last-child td {
+  border-bottom: none;
+}
+
+.snapshot-table td:last-child {
+  border-right: none;
+}
+
+/* Column-specific typography */
+.area-cell {
+  width: 25%;
+  color: #e4e4e7;
+  font-weight: 600;
+  background-color: #0d0d0f; /* Slightly darker shade for labels column */
+}
+
+.details-cell {
+  width: 75%;
+  color: #a1a1aa;
+}
